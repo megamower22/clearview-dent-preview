@@ -1,0 +1,130 @@
+/* Clearview Dent & Glass preview - colors and fonts are set here */
+:root {
+  --pink: #ff5fa2;
+  --pink-dark: #d93a7f;
+  --chrome: #d9dde3;
+  --chrome-2: #f3f4f7;
+  --gunmetal: #2a2d34;
+  --gunmetal-2: #3a3e47;
+  --ink: #1d1f24;
+  --muted: #565b66;
+  --font-display: "Shrikhand", Georgia, serif;
+  --font-body: "DM Sans", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: var(--font-body); font-weight: 500; font-size: 18px; line-height: 1.6; color: var(--ink); background: var(--chrome-2); }
+a { color: var(--pink-dark); }
+h1, h2, h3 { font-family: var(--font-display); font-weight: 400; line-height: 1.1; margin: 0 0 .45em; }
+h2 { font-size: clamp(30px, 4.4vw, 48px); color: var(--gunmetal); }
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+.muted { color: var(--muted); }
+.small { font-size: 13px; }
+.placeholder { background: #fff3a6; color: #5a4600; padding: 1px 6px; border-radius: 4px; font-size: .86em; font-weight: 800; font-family: var(--font-body); }
+.label { font-weight: 800; text-transform: uppercase; letter-spacing: .18em; font-size: 14px; color: var(--pink-dark); margin: 0 0 8px; font-family: var(--font-body); }
+.label-pink { color: var(--pink); }
+.preview-banner { background: var(--pink); color: var(--ink); font-size: 13px; font-weight: 800; text-align: center; padding: 6px 12px; }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; font-family: var(--font-body); font-weight: 800; text-decoration: none; border-radius: 999px; padding: 12px 26px; transition: transform .15s; border: 3px solid var(--ink); }
+.btn:hover { transform: translateY(-2px); }
+.btn svg { width: 22px; height: 22px; fill: currentColor; }
+.btn-pink { background: var(--pink); color: var(--ink); }
+.btn-pink:hover { background: #ff7cb3; }
+.btn-chrome { background: linear-gradient(#fff, var(--chrome)); color: var(--ink); }
+.btn-sm { font-size: 15px; padding: 9px 20px; white-space: nowrap; }
+.btn-lg { font-size: 19px; padding: 14px 30px; }
+
+.header { background: var(--gunmetal); position: sticky; top: 0; z-index: 10; }
+.header-row { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 10px; padding-bottom: 10px; }
+.brand { display: flex; align-items: center; gap: 14px; text-decoration: none; min-width: 0; }
+.logo { width: 74px; height: 74px; border-radius: 50%; background: var(--pink); display: flex; align-items: center; justify-content: center; flex: 0 0 auto; border: 4px solid var(--chrome); }
+.logo svg { width: 52px; height: 52px; fill: var(--gunmetal); }
+.brand-text { display: flex; flex-direction: column; line-height: 1; min-width: 0; }
+.brand-name { font-family: var(--font-display); font-size: 42px; color: #fff; }
+.brand-sub { font-weight: 800; font-size: 15px; color: var(--pink); text-transform: uppercase; letter-spacing: .1em; margin-top: 4px; }
+
+.hero { background: var(--gunmetal); padding: 50px 0 70px; }
+.windshield { position: relative; overflow: hidden; background: linear-gradient(160deg, rgba(255,255,255,.18), rgba(255,255,255,.04) 50%, rgba(255,95,162,.12)), #343843; border: 10px solid #121318; border-radius: 60px 60px 26px 26px / 90px 90px 26px 26px; padding: 60px 48px 54px; color: #fff; box-shadow: inset 0 0 0 2px rgba(217,221,227,.25); }
+.windshield::before { content: ""; position: absolute; top: -40%; left: 55%; width: 120px; height: 200%; background: linear-gradient(90deg, transparent, rgba(255,255,255,.12), transparent); transform: rotate(25deg); }
+.crack { position: absolute; right: 9%; top: 18%; width: 90px; height: 90px; background:
+  linear-gradient(20deg, transparent 48%, rgba(255,255,255,.55) 49%, rgba(255,255,255,.55) 51%, transparent 52%),
+  linear-gradient(110deg, transparent 48%, rgba(255,255,255,.45) 49%, rgba(255,255,255,.45) 51%, transparent 52%),
+  linear-gradient(160deg, transparent 48%, rgba(255,255,255,.45) 49%, rgba(255,255,255,.45) 51%, transparent 52%),
+  radial-gradient(circle, rgba(255,255,255,.7) 0 6px, transparent 7px); }
+.pill { display: inline-block; background: var(--chrome); color: var(--ink); font-weight: 800; font-size: 14px; text-transform: uppercase; letter-spacing: .12em; padding: 6px 16px; border-radius: 999px; margin: 0 0 18px; position: relative; }
+.hero-name { position: relative; font-size: clamp(64px, 11vw, 140px); line-height: .95; margin: 0 0 20px; color: #fff; text-shadow: 5px 5px 0 var(--pink-dark); }
+.hero-name span { display: block; font-family: var(--font-body); font-weight: 800; font-size: .26em; color: var(--pink); text-shadow: none; text-transform: uppercase; letter-spacing: .12em; margin-top: 12px; }
+.hero-line { position: relative; font-size: 20px; color: #e3e5ea; max-width: 600px; margin: 0; }
+.hero-btns { position: relative; display: flex; flex-wrap: wrap; gap: 14px; margin-top: 28px; }
+
+.ticker { background: var(--pink); color: var(--ink); overflow: hidden; white-space: nowrap; border-top: 3px solid var(--ink); border-bottom: 3px solid var(--ink); }
+.ticker div { display: inline-block; padding: 12px 0; font-family: var(--font-display); font-size: 22px; animation: tick 30s linear infinite; }
+@keyframes tick { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .ticker div { animation: none; } }
+
+.section { padding: 80px 0; }
+.circles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; margin-top: 30px; }
+.circle-card { background: #fff; border-radius: 26px; padding: 30px 26px; text-align: center; border: 3px solid var(--gunmetal); }
+.circle { width: 130px; height: 130px; border-radius: 50%; margin: 0 auto 18px; display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 32px; color: var(--ink); box-shadow: inset -10px -12px 0 rgba(0,0,0,.12); }
+.c1 { background: var(--pink); } .c2 { background: var(--chrome); } .c3 { background: var(--gunmetal); color: var(--pink); }
+.circle-card h3 { font-size: 24px; color: var(--gunmetal); }
+.circle-card p { margin: 0; color: var(--muted); font-size: 16px; }
+
+.van { background: var(--chrome); padding: 64px 0; border-top: 3px solid var(--gunmetal); border-bottom: 3px solid var(--gunmetal); }
+.van-inner { display: grid; grid-template-columns: 1fr 1.3fr; gap: 40px; align-items: center; }
+.van-art svg { width: 100%; max-width: 380px; fill: var(--pink); }
+.van p { margin: 0 0 10px; }
+.who { font-weight: 800; color: var(--pink-dark); text-transform: uppercase; letter-spacing: .1em; font-size: 15px; }
+
+.about { display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: center; }
+.joe { display: flex; gap: 24px; align-items: center; }
+.joe-badge { width: 140px; height: 140px; flex: 0 0 auto; border-radius: 50%; background: var(--gunmetal); color: #fff; display: flex; flex-direction: column; align-items: center; justify-content: center; border: 6px solid var(--pink); }
+.joe-badge b { font-family: var(--font-display); font-weight: 400; font-size: 46px; line-height: 1; color: var(--pink); }
+.joe-badge span { font-weight: 800; text-transform: uppercase; letter-spacing: .14em; font-size: 14px; }
+.joe p { margin: 0; }
+.rev-card { background: #fff; border-radius: 22px; padding: 28px; border: 3px dashed var(--pink); }
+.rev-card p { margin: 0 0 8px; }
+
+.contact { background: var(--gunmetal); color: #fff; padding: 76px 0; }
+.contact-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 40px; align-items: center; }
+.phone { display: block; font-family: var(--font-display); font-size: clamp(36px, 5.6vw, 62px); color: #fff; text-decoration: none; line-height: 1.1; white-space: nowrap; text-shadow: 4px 4px 0 var(--pink-dark); }
+.info { margin: 0; background: #fff; color: var(--ink); padding: 22px 26px; border-radius: 22px; border: 4px solid var(--pink); }
+.info div { display: grid; grid-template-columns: 96px 1fr; gap: 12px; padding: 10px 0; border-bottom: 2px solid var(--chrome-2); }
+.info div:last-child { border-bottom: 0; }
+.info dt { font-weight: 800; text-transform: uppercase; letter-spacing: .08em; font-size: 13px; color: var(--pink-dark); padding-top: 4px; }
+.info dd { margin: 0; overflow-wrap: anywhere; }
+.info a { color: var(--ink); font-weight: 800; }
+
+.footer { background: #17181c; color: #b3b7c0; text-align: center; padding: 30px 0 92px; }
+.footer a { color: var(--pink); }
+.footer p { margin: 4px 0; }
+.footer-name { font-family: var(--font-display); font-size: 24px; color: #fff; }
+
+.mobile-call { display: none; position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 20; background: var(--pink); color: var(--ink); font-weight: 800; font-size: 20px; text-align: center; text-decoration: none; padding: 15px; border-radius: 999px; border: 3px solid var(--ink); box-shadow: 0 8px 24px rgba(0,0,0,.35); }
+
+@media (min-width: 861px) { .footer { padding-bottom: 30px; } }
+@media (max-width: 860px) {
+  .circles, .van-inner, .about, .contact-grid { grid-template-columns: 1fr; }
+  .van-art svg { max-width: 260px; }
+  .mobile-call { display: block; }
+}
+@media (max-width: 600px) {
+  body { font-size: 17px; }
+  .btn-sm { display: none; }
+  .logo { width: 58px; height: 58px; }
+  .logo svg { width: 40px; height: 40px; }
+  .brand-name { font-size: 33px; }
+  .brand-sub { font-size: 12px; }
+  .hero { padding: 24px 0 40px; }
+  .windshield { padding: 40px 20px 34px; border-width: 7px; border-radius: 40px 40px 18px 18px / 60px 60px 18px 18px; }
+  .pill { font-size: 12px; }
+  .crack { width: 60px; height: 60px; right: 4%; top: 6%; }
+  .hero-name { font-size: 12.6vw; text-shadow: 3px 3px 0 var(--pink-dark); }
+  .hero-name span { font-size: .3em; }
+  .hero-line { font-size: 17px; }
+  .btn-lg { font-size: 17px; padding: 13px 24px; }
+  .joe { flex-direction: column; align-items: flex-start; }
+  .phone { font-size: 10vw; }
+  .info div { grid-template-columns: 1fr; gap: 2px; }
+}
+@media (max-width: 380px) { .brand-name { font-size: 28px; } }
